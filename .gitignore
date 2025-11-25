@@ -161,3 +161,6 @@ site/
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints
+
+# package-lock.json
+package-lock.json
