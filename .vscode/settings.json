@@ -1,0 +1,142 @@
+// .vscode/settings.json
+// NOTE: This file defines VS Code settings that apply only when you have this
+// specific project folder open. It overrides global user settings, ensuring
+// everyone working on the project uses the same editor configuration (like
+// format-on-save, default formatters, etc.).
+
+{
+  // ---- General Editor Settings ----
+  "editor.formatOnSave": true, // Format files automatically when saved
+  "editor.codeActionsOnSave": {
+    // Attempt to auto-fix simple issues from these linters on save
+    "source.fixAll.markdownlint": "explicit"
+    // Add "source.fixAll.eslint": "explicit" if you ever add ESLint
+  },
+  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
+  "files.insertFinalNewline": true, // Ensure files end with a newline
+
+  // ---- Default Formatter (Global for Workspace) ----
+  // Use Prettier for most file types, unless overridden below
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ---- Language-Specific Settings & Formatter Overrides ----
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter", // Black is the authority for Python
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+    // Optional: Auto-sort imports using the Python extension's capability
+    // "editor.codeActionsOnSave": {
+    //   "source.organizeImports": "explicit"
+    // }
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier handles Markdown formatting
+    "editor.wordWrap": "on" // Improves readability for prose
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier handles YAML formatting
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // Prettier handles JSON formatting
+  },
+  "[jsonc]": {
+    // JSON with Comments
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ---- Linter Settings ----
+  // Ensure Flake8 is used and Pylint (often enabled by default by Python ext) is off
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.lintOnSave": true, // Run Flake8 check when saving Python files
+
+  "markdownlint.run": "onSave", // Run markdownlint check when saving Markdown files
+
+  // ---- Spell Checker Configuration (Optional but Recommended) ----
+  // Add words common in your codebase that aren't in standard dictionaries
+  "cSpell.words": [
+    "autopep",
+    "BEM",
+    "bemhelper",
+    "cjpeg",
+    "clsx",
+    "codestyle",
+    "datasource",
+    "deque",
+    "devcontainer",
+    "devcontainers",
+    "Flake",
+    "Flake8",
+    "Gherkin",
+    "github",
+    "globby",
+    "HOCs",
+    "hookform",
+    "IETF",
+    "IOD",
+    "jsonify",
+    "jsonschema",
+    "keyof",
+    "lcov",
+    "lite",
+    "linter",
+    "linting",
+    "markdownlint",
+    "millis",
+    "mkdir",
+    "nbsp",
+    "ndjson",
+    "noqa", // Common instruction for linters
+    "npmrc",
+    "presave",
+    "prettierrc",
+    "pycodestyle",
+    "pydocstyle",
+    "pyflakes",
+    "pyproject",
+    "pytest",
+    "pytype",
+    "readonly",
+    "repo",
+    "rgba",
+    "Sonarlint",
+    "sonarqube",
+    "sqlfluff",
+    "streetsidesoftware",
+    "stylelint",
+    "tailwindcss",
+    "tanstack",
+    "todos",
+    "toml",
+    "TSTAMP",
+    "typeof",
+    "unstyled",
+    "untracked",
+    "venv",
+    "vite",
+    "vitejs",
+    "vscode",
+    "WORKDIR",
+    "xliff",
+    "yaml",
+    "yml",
+    "zustand"
+  ],
+  // Paths for the spell checker to ignore
+  "cSpell.ignorePaths": [
+    "**/package.json",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/pnpm-lock.yaml",
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/venv/**",
+    "**/.venv/**",
+    "**/.vscode/**",
+    "**/*.svg",
+    "**/*.pyc",
+    "**/__pycache__/**"
+  ],
+  // Add rulers
+  "editor.rulers": [80, 88]
+}

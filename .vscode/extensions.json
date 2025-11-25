@@ -1,0 +1,19 @@
+// vscode/extensions.json
+{
+  "recommendations": [
+    // -- Required Core Support -
+    "ms-python-python", // Core Python language support, needed for other Python extensions
+    "redhat vscode-yaml", // YAML Language Support
+
+    // -- Required for LASER Kit Formatting/Linting -
+    "esbenp-prettier-vscode", // Prettier Formatter (Handles MD, YAML, JSON etc.) •
+    "ms-python.black-formatter", // Black Formatter (Python)
+    "ms-python.flake8", // Flake8 Linter (Python)
+    "davidanson.vscode-markdownlint", // Markdown Linter
+
+    // -- Recommended for Development Experience -
+    "streetsidesoftware.code-spell-checker", // Spell Checker
+    "tamasfe.even-better-toml", // TOML Language Support
+    "box-of-hats.bemhelper" // BEM Helper (Helps write BEM class names)
+  ]
+}
